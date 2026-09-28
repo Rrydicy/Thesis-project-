@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EECS Masters Thesis - Design Artefact Submission</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 14mm 15mm 14mm 15mm;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #2c3e50;
+            line-height: 1.42;
+            font-size: 9.5pt;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .page {
+            background: white;
+            padding: 22px 28px;
+            max-width: 840px;
+            margin: 0 auto 18px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-bottom: 2px solid #1b4f72;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .header-title {
+            font-size: 15.5pt;
+            font-weight: 700;
+            color: #1a5276;
+            margin: 0;
+        }
+        .header-subtitle {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #566573;
+            margin-top: 2px;
+        }
+        .meta-info {
+            text-align: right;
+            font-size: 8pt;
+            color: #555;
+            line-height: 1.35;
+        }
+        h2 {
+            font-size: 11pt;
+            color: #1b4f72;
+            border-left: 4px solid #2980b9;
+            padding-left: 7px;
+            margin-top: 8px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        h3 {
+            font-size: 10pt;
+            color: #1b4f72;
+            margin-top: 8px;
+            margin-bottom: 3px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 6px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-top: 2px;
+            margin-bottom: 5px;
+            padding-left: 18px;
+        }
+        li {
+            margin-bottom: 2px;
+        }
+        .repo-bar {
+            background: #1b2631;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 8pt;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .repo-link {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .svg-container {
+            width: 100%;
+            text-align: center;
+            margin: 4px 0;
+        }
+        .svg-container img {
+            width: 100%;
+            max-height: 385px;
+            border-radius: 4px;
+            border: 1px solid #d5dbdb;
+        }
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 12px;
+            align-items: center;
+            margin-top: 6px;
+        }
+        .evidence-img {
+            width: 100%;
+            max-height: 175px;
+            object-fit: contain;
+            border-radius: 4px;
+            border: 1px solid #d5dbdb;
+        }
+        .evidence-text {
+            font-size: 8pt;
+            color: #424949;
+            line-height: 1.38;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page page-break">
+    <table class="header-table">
+        <tr>
+            <td>
+                <h1 class="header-title">Design Artefact: Cross-Dataset Battery RUL Architecture</h1>
+                <div class="header-subtitle">Multi-Source Health Indicator Evaluation &amp; Generalized Forecasting Pipeline</div>
+            </td>
+            <td class="meta-info">
+                <strong>Course:</strong> EECS Masters Thesis<br>
+                <strong>Student:</strong> Ryan / Rrydicy<br>
+                <strong>Date:</strong> Semester 2, 2026
+            </td>
+        </tr>
+    </table>
+
+    <div class="repo-bar">
+        <span>📦 <strong>Working GitHub Repository &amp; Digital Resource:</strong></span>
+        <a class="repo-link" href="https://github.com/Rrydicy/Thesis-project-">https://github.com/Rrydicy/Thesis-project-</a>
+    </div>
+
+    <h2>1. End-to-End System Architecture Pipeline (The Design Artefact)</h2>
+    <div class="svg-container">
+        <img src="artefact_architecture_diagram.svg" alt="Cross-Dataset Battery RUL Architecture Pipeline">
+    </div>
+
+    <h2>2. Implementation Prototype &amp; Experimental Validation Evidence</h2>
+    <div class="evidence-grid">
+        <div>
+            <img class="evidence-img" src="capacity_degradation.png" alt="Capacity Degradation Verification">
+        </div>
+        <div class="evidence-text">
+            <strong>Implementation Progress &amp; Feasibility Evidence:</strong>
+            <ul>
+                <li><strong>Multi-Source Data Ingestion:</strong> Parsed 616 cycles of NASA 18650 cells into structured dataframes; architecture designed for CALCE benchmark integration.</li>
+                <li><strong>Ground Truth Verification:</strong> Validated exact EOL thresholds (1.40 Ah = 30% fade) across canonical benchmark cells (B0005, B0006, B0007, B0018).</li>
+                <li><strong>Reproducibility Infrastructure:</strong> Python 3.11 environment locked with <code>uv</code>, PyTorch 2.13, Scikit-Learn 1.9, and automated Jupyter pipelines.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page">
+    <h1 class="header-title" style="font-size: 13.5pt; border-bottom: 2px solid #1b4f72; padding-bottom: 4px; margin-bottom: 12px;">Accompanying Explanation (Word Count: 395 Words)</h1>
+
+    <p>This project focuses on developing a universal forecasting model to predict the Remaining Useful Life (RUL) of residential Battery Energy Storage Systems (BESS). In household applications, battery reliability and safety are paramount across diverse commercial chemistries such as Lithium Iron Phosphate (LFP) and Nickel Manganese Cobalt (NMC). However, conventional prognostic approaches are typically tailored to single-source datasets and specific cell types, failing to generalize across varied real-world operating environments. To overcome this limitation, the proposed research establishes a cohesive two-phase workflow designed to bridge disparate data sources and achieve robust, cross-chemistry lifetime forecasting.</p>
+
+    <p>The first phase is dedicated to <strong>Feature Importance Analysis</strong>. In this stage, candidate operational degradation factors—including discharge duration, partial voltage drop intervals, temperature dynamics, and internal resistance—are extracted from multi-source benchmark repositories such as NASA and CALCE. By mathematically evaluating and ranking the impact of these factors, the project builds a rigorous empirical understanding of how different operating parameters govern battery degradation across varied chemistries. Building upon these insights, the second phase focuses on <strong>Cross-Dataset Integration and Generalization</strong>. This phase aims to eliminate the inherent barriers separating disparate battery datasets by projecting heterogeneous degradation features into a unified, universal feature space, ultimately enabling accurate and chemistry-agnostic RUL predictions.</p>
+
+    <p>A key methodological decision in this design is that the specific machine learning (ML) and neural network (NN) architectures, as well as the exact mathematical formulations used to construct the universal feature space, will be determined based on the empirical findings of Phase 1. Evaluating factor rankings across chemistries beforehand prevents premature model commitment and ensures that subsequent predictive modeling is grounded in verified degradation mechanisms. To ensure transparency, reproducibility, and collaborative development, all pipelines and experimental workflows are built using open-source tools (PyTorch and Scikit-Learn) and managed within an already initialized GitHub repository (<a href="https://github.com/Rrydicy/Thesis-project-">https://github.com/Rrydicy/Thesis-project-</a>).</p>
+
+    <p>The primary technical risk facing this project lies in whether a mathematically robust mapping can be successfully constructed to project disparate dataset characteristics into a shared universal space without sacrificing prediction accuracy. This risk will be addressed through dimensionless health indicator normalization (such as State of Health) and systematically validated through a multi-tier testing protocol spanning in-domain testing, zero-shot cross-dataset evaluation, and few-shot fine-tuning. This design directly guides the forthcoming project milestones, starting with correlation-based factor ranking, followed by universal feature space formulation, model calibration, and the derivation of actionable predictive maintenance recommendations for domestic BESS.</p>
+</div>
+
+</body>
+</html>
